@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RepairDorm</string>
+    <string name="title_activity_student_new">StudentNewActivity</string>
+    <string name="title_activity_student2">ประวัติคำร้องแจ้งซ่อม</string>
+</resources>

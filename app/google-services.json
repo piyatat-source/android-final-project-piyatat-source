@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1042596890582",
+    "firebase_url": "https://projectfinal-dfd78.firebaseio.com",
+    "project_id": "projectfinal-dfd78",
+    "storage_bucket": "projectfinal-dfd78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042596890582:android:acda885c842db523d2c677",
+        "android_client_info": {
+          "package_name": "th.ac.kku.cis.mobileapp.RepairDorm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042596890582-0ehivi4h5q79pnathedn60d8ggob1e13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "th.ac.kku.cis.mobileapp.RepairDorm",
+            "certificate_hash": "881c373dc4dbf7d1d4747988b453240043daa220"
+          }
+        },
+        {
+          "client_id": "1042596890582-0osibte4tbgfm91r82184p2k7014db3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeY-k06Ozb6RhUS7ISD4HhUiefB8juoV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042596890582-0osibte4tbgfm91r82184p2k7014db3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
