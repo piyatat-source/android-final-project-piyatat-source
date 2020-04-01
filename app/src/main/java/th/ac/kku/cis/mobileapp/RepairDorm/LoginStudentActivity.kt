@@ -38,6 +38,8 @@ class LoginStudentActivity : AppCompatActivity() {
         setContentView(R.layout.activity_loginstudent)
 
 
+
+
         loginstudent_btn.setOnClickListener {
             StudentID = loginstudent_stdid.text.toString()
             Password = loginstudent_password.text.toString()
@@ -57,13 +59,12 @@ class LoginStudentActivity : AppCompatActivity() {
             else if (Password.length != 13) {
                 Toast.makeText(this@LoginStudentActivity, "รหัสผ่านไม่ถูกต้อง", Toast.LENGTH_LONG).show()
             }
-
-            checkIDPassword(StudentID, Password)
+            IDPassword(StudentID, Password)
         }
     }
 
 
-    fun checkIDPassword(id: String, pw: String) {
+    fun IDPassword(id: String, pw: String) {
 
         FirebaseDatabase.getInstance().reference.child("students")
             .addValueEventListener(object : ValueEventListener {
@@ -123,4 +124,5 @@ class LoginStudentActivity : AppCompatActivity() {
             })
 
     }
+
 }

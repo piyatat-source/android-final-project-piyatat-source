@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".showReqActivity"
+    tools:context=".showReqForStaffActivity"
     android:background="#FFFF99">
 
     <TextView
@@ -164,8 +164,9 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="411dp"
-        android:layout_height="344dp"
+        android:id="@+id/linearLayout8"
+        android:layout_width="415dp"
+        android:layout_height="165dp"
         android:layout_marginTop="60dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -175,7 +176,7 @@
         <ScrollView
             android:id="@+id/textView22"
             android:layout_width="match_parent"
-            android:layout_height="294dp"
+            android:layout_height="165dp"
             android:paddingStart="20sp"
             android:paddingEnd="20sp">
 
@@ -214,10 +215,26 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/kanit"
             android:text="[roomNo]"
-            android:paddingStart="5dp"
             android:textColor="#3A3A3A"
+            android:paddingStart="5dp"
             android:textSize="18sp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="330dp"
+        android:layout_height="65dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+        <Button
+            android:id="@+id/btn_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ซ่อมแซมสำเร็จ"
+            android:textSize="20sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

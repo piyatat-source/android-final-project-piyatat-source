@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginStaffActivity"
-    android:background="#FFFFFF">
+    android:background="#FFFF99">
 
 
     <ImageView
@@ -24,7 +24,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="340dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,17 +39,20 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit"
+                android:fontFamily="@font/kanit_bold"
                 android:text="อีเมล์"
                 android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/loginstaff_email"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
+                android:background="@drawable/textbox_input"
                 android:ems="10"
                 android:fontFamily="@font/kanit"
                 android:inputType="textPersonName"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:textColorLink="#FFCC66"
                 android:textSize="18sp" />
 
@@ -57,17 +60,20 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit"
+                android:fontFamily="@font/kanit_bold"
                 android:text="รหัสผ่าน"
                 android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/loginstaff_password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
+                android:background="@drawable/textbox_input"
                 android:ems="10"
                 android:fontFamily="@font/kanit"
                 android:inputType="textPassword"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:textColorLink="#FFCC66"
                 android:textSize="18sp" />
 
@@ -76,7 +82,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="525dp"
         android:orientation="horizontal"
@@ -86,11 +92,12 @@
 
         <Button
             android:id="@+id/loginstaff_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="65dp"
             android:fontFamily="@font/kanit"
             android:text="เข้าสู่ระบบ"
-            android:textSize="18sp" />
+            android:background="@drawable/button_menu"
+            android:textSize="22sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

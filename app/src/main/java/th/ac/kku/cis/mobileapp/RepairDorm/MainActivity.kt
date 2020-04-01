@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var mAuth: FirebaseAuth? = null
+    //var mAuth: FirebaseAuth? = null
 
 
     private val TAG: String = "Main Activity"
@@ -19,32 +19,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mAuth = FirebaseAuth.getInstance()
 
-
-        if(mAuth!!.currentUser != null){
-            Log.d(TAG, "Continue with : " + mAuth!!. currentUser!!.email)
-            startActivity(Intent(this, StaffActivity::class.java))
-            finish()
-        }
 
         btn_asStaff.setOnClickListener {
             startActivity(Intent(this, LoginStaffActivity::class.java))
         }
 
-        checkCurrentUser()
+        btn_asStudent.setOnClickListener{
+            startActivity(Intent(this, LoginStudentActivity::class.java))
+        }
+
+
     }
 
     //check current user from database
-    private fun checkCurrentUser() {
-        val studentUser = FirebaseAuth.getInstance().currentUser
-        if (studentUser != null) {
-            startActivity(Intent(this, StudentActivity2::class.java))
-            finish()
-        }
-
-        btn_asStudent.setOnClickListener {
-            startActivity(Intent(this, LoginStudentActivity::class.java))
-        }
-    }
 }

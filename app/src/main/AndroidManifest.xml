@@ -11,24 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".showReqActivity"></activity>
+        <activity android:name=".showReqForStaffActivity"></activity>
+        <activity android:name=".showReq2Activity" />
+        <activity android:name=".showReq2" />
+        <activity android:name=".showReqActivity" />
         <activity
             android:name=".StudentActivity2"
-            android:label="@string/title_activity_student2"
-            android:theme="@style/AppTheme"></activity>
+            android:label="ประวัติคำร้องแจ้งซ่อม"
+            android:theme="@style/AppTheme" />
         <activity android:name=".AddReqActivity" />
         <activity android:name=".requestListActivity" />
         <activity android:name=".Test" />
-        <activity android:name=".LoginStudentActivity">
+        <activity android:name=".LoginStudentActivity" />
+        <activity android:name=".LoginStaffActivity" />
+        <activity android:name=".StaffActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginStaffActivity" />
-        <activity android:name=".StaffActivity" />
-        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

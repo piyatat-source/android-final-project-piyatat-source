@@ -1,7 +1,6 @@
 package th.ac.kku.cis.mobileapp.RepairDorm
 
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,8 +9,9 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_addreq.*
-import kotlinx.android.synthetic.main.content_student2.*
 import th.ac.kku.cis.mobileapp.RepairDorm.Models.infoRequest
 import java.text.SimpleDateFormat
 import java.util.*
@@ -27,10 +27,9 @@ class AddReqActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_addreq)
 
-//        var i = intent
-//        var Firstname = i.getStringExtra("firstname")
-//        var Lastname = i.getStringExtra("lastname")
-//        tvFullname.text = "คุณ " + Firstname + " " + Lastname
+        var i = intent
+        var Stdid = i.getStringExtra("stdid")
+        Log.d(TAG,"รหัสนักศึกษาของคุณ คือ " + Stdid)
 
         val date: String = SimpleDateFormat("dd/MM/yyyy").format(Date())
         tv_date.text = date
@@ -62,12 +61,12 @@ class AddReqActivity : AppCompatActivity() {
         }
 
         btn_save.setOnClickListener {
-            saveData(date,selectJob)
+            saveData(date,selectJob,Stdid)
         }
     }
 
 
-    private fun saveData(date: String, selectJob: String?) {
+    private fun saveData(date: String, selectJob: String?, reqID: String?) {
         //var date: String = SimpleDateFormat("yyyy/MM/dd").format(Date())
 
         val topic = tb_topic.text.toString().trim()
@@ -91,13 +90,14 @@ class AddReqActivity : AppCompatActivity() {
         }
 
 
-        val myDataBase = FirebaseDatabase.getInstance().getReference("repairlists")
+        val myDataBase = FirebaseDatabase.getInstance().getReference("repairlists").child(reqID.toString())
+        //val myDataBase = Firebase.database.reference.child("repairlists").child(reqID.toString())
         val id = myDataBase.push().key
 
         val req = infoRequest(topic,date,jobReq,description)
         if (id != null) {
             myDataBase.child(id).setValue(req).addOnCompleteListener{
-                Toast.makeText(this,"ส่งคำร้องเรียบร้อยแล้ว  ",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"ส่งคำร้องเรียบร้อยแล้ว",Toast.LENGTH_LONG).show()
             }
         }
     }

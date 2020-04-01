@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginStudentActivity"
-    android:background="#FFF">
+    android:background="#FFFF99">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -36,35 +36,37 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit"
+                android:fontFamily="@font/kanit_bold"
                 android:text="รหัสนักศึกษา"
                 android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/loginstudent_stdid"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
+                android:background="@drawable/textbox_input"
                 android:digits="1,2,3,4,5,6,7,8,9,0,-"
                 android:ems="10"
                 android:fontFamily="@font/kanit"
-                android:textSize="20sp"
-                android:background="@drawable/textbox_input"
+                android:gravity="center_vertical"
+                android:inputType="numberSigned"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:inputType="numberSigned" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit"
+                android:fontFamily="@font/kanit_bold"
                 android:text="รหัสผ่าน"
                 android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/loginstudent_password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
+                android:gravity="center_vertical"
                 android:ems="10"
                 android:textSize="20sp"
                 android:paddingStart="8dp"
@@ -80,7 +82,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="100dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,11 +90,12 @@
 
         <Button
             android:id="@+id/loginstudent_btn"
-            android:layout_width="264dp"
+            android:layout_width="300dp"
             android:layout_height="65dp"
             android:layout_marginTop="525dp"
             android:fontFamily="@font/kanit"
             android:text="เข้าสู่ระบบ"
+            android:background="@drawable/button_menu"
             android:textSize="22sp"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>

@@ -8,6 +8,7 @@ data class infoStudent(
     var Email: String? = "",
     var Firstname: String? = "",
     var Lastname: String? = "",
+    var Tel: String? = "",
     var numID: String? = "",
     var roomNo: String? = ""
 )

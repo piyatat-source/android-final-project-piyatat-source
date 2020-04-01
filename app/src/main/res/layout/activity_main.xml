@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#FFFF99"
     tools:context=".MainActivity">
 
     <ImageView
@@ -23,7 +23,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="280dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:layout_marginBottom="200dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,17 +35,29 @@
             android:id="@+id/btn_asStaff"
             android:layout_width="match_parent"
             android:layout_height="65dp"
+            android:background="@drawable/button_menu"
             android:fontFamily="@font/kanit"
             android:text="Sign in as Staff"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="279dp"
+        android:layout_height="101dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
             android:id="@+id/btn_asStudent"
             android:layout_width="match_parent"
             android:layout_height="65dp"
+            android:background="@drawable/button_menu"
             android:fontFamily="@font/kanit"
             android:text="Sign in as Student"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

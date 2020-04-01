@@ -10,5 +10,4 @@ data class infoRequest(
     var Jobreq: String? = "",
     var Description: String? = "",
     var Status: String? = "รอดำเนินการ"
-
 )

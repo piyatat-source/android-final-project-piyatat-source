@@ -14,6 +14,7 @@
         android:layout_height="36dp"
         android:gravity="end"
         android:orientation="horizontal"
+        android:background="#FFFF99"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -42,7 +43,8 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        android:background="#FFFF99">
 
         <ListView
             android:id="@+id/listViewRequest"
