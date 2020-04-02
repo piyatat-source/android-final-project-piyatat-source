@@ -234,6 +234,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="ซ่อมแซมสำเร็จ"
+            android:background="@drawable/button_menu2"
             android:textSize="20sp" />
     </LinearLayout>
 

@@ -1,11 +1,13 @@
 package th.ac.kku.cis.mobileapp.RepairDorm
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ListView
+import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +17,7 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_requestlist.*
 import kotlinx.android.synthetic.main.activity_student2.*
 import kotlinx.android.synthetic.main.content_student2.*
 import th.ac.kku.cis.mobileapp.RepairDorm.Adapters.ListRequestAdapter

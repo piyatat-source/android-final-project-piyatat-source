@@ -68,7 +68,7 @@ class showReqForStaffActivity : AppCompatActivity() {
         builder.setPositiveButton("ยืนยัน") { dialog, which ->
 
             val myDataBase = FirebaseDatabase.getInstance().getReference("repairlists").child(stdid).child(key)
-
+            txt_status.text = "ดำเนินการเสร็จสิ้น"
             myDataBase.child("status").setValue("ดำเนินการเสร็จสิ้น").addOnCompleteListener{
                 Toast.makeText(this, "ซ่อมแซมเสร็จสิ้น", Toast.LENGTH_SHORT).show()
             }
