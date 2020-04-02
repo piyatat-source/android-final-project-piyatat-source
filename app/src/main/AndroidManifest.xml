@@ -7,13 +7,11 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="ประวัติคำร้องแจ้งซ่อม"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".showReqForStaffActivity"></activity>
-        <activity android:name=".showReq2Activity" />
-        <activity android:name=".showReq2" />
         <activity android:name=".showReqActivity" />
         <activity
             android:name=".StudentActivity2"

@@ -9,5 +9,7 @@ data class infoRequest(
     var Date: String? = "",
     var Jobreq: String? = "",
     var Description: String? = "",
-    var Status: String? = "รอดำเนินการ"
+    var Status: String? = "รอดำเนินการ",
+    var key: String = "",
+    var stdid: String = ""
 )

@@ -70,12 +70,23 @@
 
             <TextView
                 android:id="@+id/txt_Status"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/kanit"
                 android:paddingLeft="5dp"
                 android:text="[Status]"
                 android:textColor="#3A3A3A" />
+
+            <TextView
+                android:id="@+id/btn_del"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/kanit"
+                android:paddingLeft="5dp"
+                android:background="#CC3333"
+                android:textSize="18dp"
+                android:text="ลบ "
+                android:textColor="#FFF" />
         </LinearLayout>
     </LinearLayout>
 

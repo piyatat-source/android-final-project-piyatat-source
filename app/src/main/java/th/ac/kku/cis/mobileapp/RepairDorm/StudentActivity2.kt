@@ -3,6 +3,8 @@ package th.ac.kku.cis.mobileapp.RepairDorm
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ListView
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
@@ -47,6 +49,8 @@ class StudentActivity2 : AppCompatActivity() {
                     val dataReq = mutableListOf<infoRequest>()
 
                     for (postSnapshot in dataSnapshot.children) {
+                        var key = postSnapshot.key.toString()
+                        var stdid = Stdid
                         dataReq.add(
                             infoRequest(
                                 postSnapshot.child("topic").getValue().toString()
@@ -54,6 +58,8 @@ class StudentActivity2 : AppCompatActivity() {
                                 , postSnapshot.child("jobreq").getValue().toString()
                                 , postSnapshot.child("description").getValue().toString()
                                 , postSnapshot.child("status").getValue().toString()
+                                , key
+                                , stdid
                             )
                         )
                     }
@@ -115,6 +121,23 @@ class StudentActivity2 : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.logoutmenu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.Stdlogout -> {
+                Toast.makeText(this, "ออกจากระบบแล้ว", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, LoginStudentActivity::class.java))
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
 

@@ -46,21 +46,23 @@ class StaffActivity : AppCompatActivity() {
                         for (eachRepairList in postSnapshot.children){
 
                             var key = eachRepairList.key.toString()
-                            dataReq.add(
-                                listRequestFB(
-                                    eachRepairList.child("date").getValue().toString(),
-                                    eachRepairList.child("description").getValue().toString(),
-                                    eachRepairList.child("jobreq").getValue().toString(),
-                                    eachRepairList.child("status").getValue().toString(),
-                                    eachRepairList.child("topic").getValue().toString(),
-                                    idstd,
-                                    key
-                                ))
+                            if(eachRepairList.child("status").getValue().toString() == "รอดำเนินการ"){
+                                dataReq.add(
+                                    listRequestFB(
+                                        eachRepairList.child("date").getValue().toString(),
+                                        eachRepairList.child("description").getValue().toString(),
+                                        eachRepairList.child("jobreq").getValue().toString(),
+                                        eachRepairList.child("status").getValue().toString(),
+                                        eachRepairList.child("topic").getValue().toString(),
+                                        idstd,
+                                        key
+                                    ))
+                            }
                         }
                     }
 
                     listView.adapter = listReqForStaff(
-                        this@StaffActivity, R.layout.activity_showlistforstaff, dataReq
+                            this@StaffActivity, R.layout.activity_showlistforstaff, dataReq
                     )
 
                     listView.setOnItemClickListener { parent, view, position, id ->
